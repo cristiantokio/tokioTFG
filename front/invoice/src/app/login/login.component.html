@@ -1,0 +1,23 @@
+<div class="login">
+    <form class="custom-form" method="post">
+      <h1>Login</h1>
+      <input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Email"
+        required="required"
+      />
+      <input
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Password"
+        required="required"
+      />
+      <p *ngIf="correoincorrecto" style="color: red;">El correo es incorrecto</p>
+      <p *ngIf="pswincorrecta" style="color: red;">La contrasenia es incorrecta</p>
+      <p *ngIf="loginincorrecto" style="color: red;">El usuario o contrasenia no existe</p>
+      <button type="submit" (click)="login()">Log in</button>
+    </form>
+  </div>
